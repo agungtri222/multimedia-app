@@ -1,27 +1,70 @@
-# This is Explanation for some new functionality
+# Getting Started with Create React App
 
-    const  handleDelete  = () => {
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-        if (selectedFile) {
+## Available Scripts
 
-    	    const  newFiles  =  myFiles.filter((item) =>  item.id  !==  selectedFile.id);
+In the project directory, you can run:
 
-    	    setMyFiles(newFiles);
+### `npm start`
 
-    	    setSelectedFile(null);
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-        }
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-    };
+### `npm test`
 
-and you can use the function within your component like below.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    <button  style={styles.controlButton}  onClick={handleDelete}>Delete</button>
+### `npm run build`
 
-In this example, we have a `myFiles` state that represents a list of files. Each file object has an `id` and `name`. The `selectedFile` state keeps track of the currently selected file.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The `handleDelete` function is triggered when the "Delete" button is clicked. It removes the selected file from the `myFiles` array using the `filter` method. Then, it updates the state with the new array and resets the `selectedFile` state to `null`.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Note that you should define the `styles.controlButton` object with the desired styles for your button, such as the background color, font size, etc.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Feel free to adapt this code to fit your specific use case and incorporate it into your React component.
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
