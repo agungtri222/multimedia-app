@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "agung-multimedia-app",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
