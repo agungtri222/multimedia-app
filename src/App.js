@@ -34,12 +34,12 @@ export default function App() {
  const [filePath, setFilePath] = useState("/file-server/")
  const [showChartModal, setShowChartModal] = useState(false)
 
- const deleteItem = (item) => {
-    let index = myFiles.findIndex(
-      (record) => record.id === item.id
-    );
-    data.splice(index, 1);
-    return myFiles;
+  const handleDelete = () => {
+    if (selectedFile) {
+      const newFiles = myFiles.filter((item) => item.id !== selectedFile.id);
+      setMyFiles(newFiles);
+      setSelectedFile(null);
+    }
   };
  
  var barChartOptions = {
@@ -159,15 +159,7 @@ export default function App() {
             }
           }}
         >Download</button>
-        <button style={styles.controlButton}
-          onClick={() => {
-            if (selectedFile) {
-              const newFiles = myFiles.filter((item) => item.id !== selectedFile.id);
-              setMyFiles(newFiles)
-              setSelectedFile(null)
-            }
-          }}
-        >Delete</button>
+        <button style={styles.controlButton} onClick={handleDelete}>Delete</button>
       </div>
      <div style={styles.fileContainer}>
       <div style={{ width: "100%", padding: 10 }}>
